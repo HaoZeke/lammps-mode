@@ -167,8 +167,7 @@
 
 ;; create the list for font-lock.
 ;; each class of keyword is given a particular face
-(setq
- lammps-font-lock-keywords
+(setq lammps-font-lock-keywords
  `((,lammps-output-regexp . font-lock-function-name-face)
    (,lammps-read-regexp . font-lock-preprocessor-face)
    (,lammps-lattice-regexp . font-lock-type-face)
@@ -216,10 +215,8 @@
   (setq lammps-variable-regexp nil))
 
 ;; apply it to specified filename patterns
-(setq
- auto-mode-alist
- (append
-  auto-mode-alist
+(setq auto-mode-alist
+ (append auto-mode-alist
   '(("in\\." . lammps-mode))
   '(("\\.lmp\\'" . lammps-mode))
   ))
