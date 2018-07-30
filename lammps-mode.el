@@ -8,7 +8,7 @@
 ;; Created: December 4, 2010
 ;; Modified: July 30, 2018
 ;; Version: 1.5.0
-;; Keywords: Languages, faces
+;; Keywords: languages, faces
 ;; Homepage: https://github.com/lammps/lammps/tree/master/tools/emacs
 ;; Package-Requires: ((emacs "24.4"))
 
