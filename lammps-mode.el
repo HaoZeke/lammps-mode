@@ -1,7 +1,23 @@
-;; LAMMPS auto-mode
+;;; lammps-mode.el --- basic syntax highlighting for LAMMPS files
+
+;; Copyright (C) 2010-18 Aidan Thompson
+;; Copyright (C) 2018 Rohit Goswami
+
+;; Author: Aidan Thompson <athomps at sandia.gov>
+;; Maintainer: Rohit Goswami <r95g10 at gmail.com>
+;; Created: December 4, 2010
+;; Modified: July 30, 2018
+;; Version: 1.5.0
+;; Keywords: Languages, faces
+;; Homepage: https://github.com/lammps/lammps/tree/master/tools/emacs
+;; Package-Requires: ((emacs "24.4"))
+
+;;; Commentary:
+;; This file is not part of GNU Emacs.
 ;; translation of keyword classes from tools/vim
 ;; see http://xahlee.org/emacs/elisp_syntax_coloring.html
 
+;;; Code:
  ;; define several keyword classes
 (defvar lammps-output
   '("log"
@@ -208,3 +224,5 @@
   '(("\\.lmp\\'" . lammps-mode))
   ))
 
+(provide 'lammps-mode)
+;;; lammps-mode.el ends here
