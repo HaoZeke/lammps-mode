@@ -152,6 +152,8 @@
 (defvar lammps-variable-regexp
   "\\$\\({[a-zA-Z0-9_]+}\\)\\|\\$[A-Za-z]")
 
+(defvar lammps-font-lock-keywords)
+
 ;; clear memory
 (setq lammps-output nil)
 (setq lammps-read nil)
