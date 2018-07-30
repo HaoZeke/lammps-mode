@@ -1,0 +1,7 @@
+* LAMMPS Mode
+A major mode based off ~shell-script-mode~ for basic syntax highlighting of
+[[https://lammps.sandia.gov][lammps]] files.
+
+Updated and kept here for MELPA usage.
+A copy of the latest version is also available at the [[https://github.com/lammps/lammps][lammps github repo]], under
+the ~tool/emacs~ folder.
