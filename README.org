@@ -75,8 +75,16 @@ here]]):
     :CUSTOM_ID: autoloading-auto-recognition
     :END:
 
-For autoloading and auto-recognizing =in.*= and =*.lmp= files add the
-following to =.emacs=:
+To automatically turn on the LAMMPS mode for editing your input scripts,
+use the following line as the *first* line of your script:
+
+#+BEGIN_SRC emacs-lisp
+    # -*- lammps -*-
+#+END_SRC
+
+For automatically switching on the LAMMPS mode based on filename
+patterns, e.g. for =in.*= and =*.lmp= files, add the following code to
+your =.emacs=:
 
 #+BEGIN_SRC emacs-lisp
     (autoload 'lammps-mode "lammps-mode.el" "LAMMPS mode." t)
