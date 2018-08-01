@@ -14,24 +14,36 @@
 
 ;; This file is not part of GNU Emacs.
 
-;; This file is free software; you can redistribute it and/or modify
+;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation; either version 3, or (at your option)
-;; any later version.
+;; the Free Software Foundation; either version 2 of the License, or
+;; (at your option) any later version.
 
-;; This file is distributed in the hope that it will be useful,
+;; This program is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
 
-;; You should have received a copy of the GNU General Public License
-;; along with GNU Emacs; see the file COPYING.  If not, write to
-;; the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-;; Boston, MA 02111-1307, USA.
+;; You should have received a copy of the GNU General Public License along
+;; with this program; if not, write to the Free Software Foundation, Inc.,
+;; 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+;;; TODO
+;; - Derive from sh-script for xemacs
 
 ;;; Commentary:
 ;; translation of keyword classes from tools/vim
 ;; see http://xahlee.org/emacs/elisp_syntax_coloring.html
+
+;; Put this in your .emacs file to enable autoloading of lammps-mode
+;; and auto-recognition of "in.*" and "*.lmp" files:
+;;
+;; (autoload 'lammps-mode "lammps-mode.el" "LAMMPS mode." t)
+;; (setq auto-mode-alist (append auto-mode-alist
+;;                               '(("in\\." . lammps-mode))
+;;                               '(("\\.lmp\\'" . lammps-mode))
+;;                               ))
+;;
 
 ;;; Code:
  ;; define several keyword classes
@@ -231,13 +243,6 @@
   (setq lammps-float-regexp nil)
   (setq lammps-comment-regexp nil)
   (setq lammps-variable-regexp nil))
-
-;; apply it to specified filename patterns
-(setq auto-mode-alist
- (append auto-mode-alist
-  '(("in\\." . lammps-mode))
-  '(("\\.lmp\\'" . lammps-mode))
-  ))
 
 (provide 'lammps-mode)
 ;;; lammps-mode.el ends here
