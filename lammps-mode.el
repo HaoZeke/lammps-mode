@@ -28,6 +28,9 @@
 ;; with this program; if not, write to the Free Software Foundation, Inc.,
 ;; 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
+;;; TODO
+;; - Derive from sh-script for xemacs
+
 ;;; Commentary:
 ;; translation of keyword classes from tools/vim
 ;; see http://xahlee.org/emacs/elisp_syntax_coloring.html
