@@ -30,6 +30,8 @@
 
 ;;; TODO
 ;; - Derive from sh-script for xemacs
+;; Not worth the effort, see:
+;; https://github.com/lammps/lammps/pull/1022#issuecomment-409475108
 
 ;;; Commentary:
 ;; translation of keyword classes from tools/vim
