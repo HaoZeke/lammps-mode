@@ -5,6 +5,7 @@
   
 #+BEGIN_QUOTE
   Copyright (C) 2010-2018 Aidan Thompson <athomps at sandia.gov>
+  
   Copyright (C) 2018 Rohit Goswami <r95g10 at gmail.com>
 #+END_QUOTE
 
