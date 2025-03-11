@@ -48,7 +48,7 @@
 ;;
 
 ;;; Code:
- ;; define several keyword classes
+;; define several keyword classes
 (defvar lammps-output
   '("log"
     "write_restart"
@@ -200,25 +200,25 @@
 ;; create the list for font-lock.
 ;; each class of keyword is given a particular face
 (setq lammps-font-lock-keywords
- `((,lammps-output-regexp . font-lock-function-name-face)
-   (,lammps-read-regexp . font-lock-preprocessor-face)
-   (,lammps-lattice-regexp . font-lock-type-face)
-   (,lammps-define-regexp . font-lock-variable-name-face)
-   (,lammps-run-regexp . font-lock-keyword-face)
-   (,lammps-setup-regexp . font-lock-type-face)
-   (,lammps-particle-regexp . font-lock-type-face)
-   (,lammps-repeat-regexp . font-lock-string-face)
-   (,lammps-operator-regexp . font-lock-warning-face)
-   (,lammps-conditional-regexp . font-lock-builtin-face)
-   (,lammps-special-regexp . font-lock-constant-face)
-   (,lammps-float-regexp . font-lock-constant-face)
-   (,lammps-number-regexp . font-lock-constant-face)
-   (,lammps-comment-regexp . font-lock-constant-face)
-   (,lammps-variable-regexp . font-lock-function-name-face)
+      `((,lammps-output-regexp . font-lock-function-name-face)
+        (,lammps-read-regexp . font-lock-preprocessor-face)
+        (,lammps-lattice-regexp . font-lock-type-face)
+        (,lammps-define-regexp . font-lock-variable-name-face)
+        (,lammps-run-regexp . font-lock-keyword-face)
+        (,lammps-setup-regexp . font-lock-type-face)
+        (,lammps-particle-regexp . font-lock-type-face)
+        (,lammps-repeat-regexp . font-lock-string-face)
+        (,lammps-operator-regexp . font-lock-warning-face)
+        (,lammps-conditional-regexp . font-lock-builtin-face)
+        (,lammps-special-regexp . font-lock-constant-face)
+        (,lammps-float-regexp . font-lock-constant-face)
+        (,lammps-number-regexp . font-lock-constant-face)
+        (,lammps-comment-regexp . font-lock-constant-face)
+        (,lammps-variable-regexp . font-lock-function-name-face)
 	;; note: order above matters. lammps-variable-regexp� goes last because
 	;; otherwise the keyword �state� in the variable �state_entry�
 	;; would be highlighted.
-   ))
+        ))
 
 ;; define the mode
 (define-derived-mode lammps-mode shell-script-mode
