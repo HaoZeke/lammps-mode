@@ -1,7 +1,7 @@
 ;;; lammps-mode.el --- basic syntax highlighting for LAMMPS files
 
 ;; Copyright (C) 2010-18 Aidan Thompson
-;; Copyright (C) 2018 Rohit Goswami
+;; Copyright (C) 2018--present Rohit Goswami
 
 ;; Author: Aidan Thompson <athomps at sandia.gov>
 ;; Maintainer: Rohit Goswami <r95g10 at gmail.com>
