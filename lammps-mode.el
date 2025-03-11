@@ -228,16 +228,19 @@
 ;; Add some more classes using explicit regexp
 
 (defvar lammps-number-regexp
-  "\\<[0-9]\\>")
+  "\\<[0-9]+\\(i\\|j\\)?\\>")
 
 (defvar lammps-float-regexp
-  "\\<[0-9-+]+.[0-9-+]*\\>")
+  "\\<[0-9]+\\.[0-9]*\\([edED][-+]*[0-9]+\\)?\\(i\\|j\\)?\\>\\|\\.[0-9]+\\([edED][-+]*[0-9]+\\)?\\(i\\|j\\)?\\>\\|\\<[0-9]+[edED][-+]*[0-9]+\\(i\\|j\\)?\\>")
 
 (defvar lammps-comment-regexp
-  "#*")
+  "#\\(.*&\\s-*\\n\\)*.*$")
 
 (defvar lammps-variable-regexp
-  "\\$\\({[a-zA-Z0-9_]+}\\)\\|\\$[A-Za-z]")
+  "\\$\\({[a-zA-Z0-9_]+\\}\\)\\|\\$[A-Za-z]")
+
+(defvar lammps-string-regexp
+  "\"[^\"]*\"\\|'[^']*'")
 
 (defvar lammps-font-lock-keywords)
 
@@ -272,6 +275,7 @@
         (,lammps-number-regexp . font-lock-constant-face)
         (,lammps-comment-regexp . font-lock-constant-face)
         (,lammps-variable-regexp . font-lock-function-name-face)
+        (,lammps-string-regexp . font-lock-string-face)
 	;; note: order above matters. lammps-variable-regexp� goes last because
 	;; otherwise the keyword �state� in the variable �state_entry�
 	;; would be highlighted.
