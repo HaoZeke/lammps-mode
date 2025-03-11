@@ -51,20 +51,30 @@
 ;; define several keyword classes
 (defvar lammps-output
   '("log"
+    "write_data"
+    "write_dump"
+    "write_coeff"
+    "info"
+    "shell"
     "write_restart"
+    "restart"
     "dump"
     "undump"
     "thermo"
     "thermo_modify"
     "thermo_style"
-    "print")
+    "print"
+    "timer")
   "LAMMPS output.")
 
 (defvar lammps-read
   '("include"
     "read"
     "read_restart"
-    "read_data")
+    "read_data"
+    "read_dump"
+    "molecule"
+    "geturl")
   "LAMMPS read.")
 
 (defvar lammps-lattice
@@ -77,6 +87,7 @@
     "create_atoms"
     "dielectric"
     "delete_atoms"
+    "displace_atoms"
     "change_box"
     "dimension"
     "replicate")
@@ -84,16 +95,44 @@
 
 (defvar lammps-define
   '("variable"
-    "group")
+    "group"
+    "compute"
+    "python"
+    "set"
+    "uncompute"
+    "kim_query"
+    "kim"
+    "group2ndx"
+    "ndx2group"
+    "mdi")
   "LAMMPS define.")
 
 (defvar lammps-run
   '("minimize"
-    "run")
+    "minimize/kk"
+    "run"
+    "rerun"
+    "tad"
+    "neb"
+    "neb/spin"
+    "prd"
+    "quit"
+    "server"
+    "temper/npt"
+    "temper/grem"
+    "temper"
+    "message"
+    "hyper"
+    "dynamical_matrix"
+    "dynamical_matrix/kk"
+    "third_order"
+    "third_order/kk"
+    "fitpod")
   "LAMMPS run.")
 
 (defvar lammps-setup
   '("min_style"
+    "min_modify"
     "fix_modify"
     "run_style"
     "timestep"
@@ -101,10 +140,19 @@
     "neigh_modify"
     "fix"
     "unfix"
-    "communicate"
+    "suffix"
+    "special_bonds"
+    "dump_modify"
+    "balance"
+    "box"
+    "clear"
+    "comm_modify"
+    "comm_style"
     "newton"
-    "nthreads"
+    "package"
     "processors"
+    "reset_atoms"
+    "reset_ids"
     "reset_timestep")
   "LAMMPS setup.")
 
@@ -112,27 +160,34 @@
   '("pair_coeff"
     "pair_style"
     "pair_modify"
+    "pair_write"
     "mass"
     "velocity"
     "angle_coeff"
     "angle_style"
+    "angle_write"
     "atom_modify"
     "atom_style"
     "bond_coeff"
     "bond_style"
+    "bond_write"
+    "create_bonds"
     "delete_bonds"
     "kspace_style"
     "kspace_modify"
     "dihedral_style"
     "dihedral_coeff"
+    "dihedral_write"
     "improper_style"
-    "improper_coeff")
+    "improper_coeff"
+    "labelmap")
   "LAMMPS particle.")
 
 (defvar lammps-repeat
   '("jump"
     "next"
-    "loop")
+    "loop"
+    "label")
   "LAMMPS repeat.")
 
 (defvar lammps-operator
@@ -152,7 +207,9 @@
 
 (defvar lammps-special
   '("EDGE"
-    "NULL")
+    "NULL"
+    "INF"
+    "&")
   "LAMMPS special.")
 
 ;; create the regex string for each class of keywords
